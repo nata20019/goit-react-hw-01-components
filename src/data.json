@@ -1,0 +1,18 @@
+[
+  {
+    "type": ".docx",
+    "percentage": 32
+  },
+  {
+    "type": ".pdf",
+    "percentage": 4
+  },
+  {
+    "type": ".mp3",
+    "percentage": 17
+  },
+  {
+    "type": ".psd",
+    "percentage": 47
+  }
+]

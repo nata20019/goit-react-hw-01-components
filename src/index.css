@@ -15,13 +15,15 @@ code {
 }
 
 .profile {
-  display: inline-block;
-  margin: auto;
+  margin: 0 auto;
+  width: 400px;
 }
-
+.description {
+  display: block;
+}
 .stats {
-  padding: 20px;
   display: flex;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   list-style: none;
@@ -35,4 +37,9 @@ code {
 .quantity {
   display: block;
   align-items: center;
+  padding: 10px;
+}
+
+.stat-list {
+  list-style: none;
 }

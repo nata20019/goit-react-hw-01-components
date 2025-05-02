@@ -43,3 +43,29 @@ code {
 .stat-list {
   list-style: none;
 }
+
+.stat-list {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.percentage {
+  display: block;
+  align-items: center;
+  padding: 10px;
+}
+
+.friend-list {
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.item {
+  padding-right: 10px;
+}

@@ -6,29 +6,24 @@ const Statistics = ({ title, stats }) => {
       <h2 className="title">{title}</h2>
 
       <ul className="stat-list">
-        <li className="item">
-          <span className="label">{stats.type}</span>
-          <span className="percentage">{stats.percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{stats.type}</span>
-          <span className="percentage">{stats.percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{stats.type}</span>
-          <span className="percentage">{stats.percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">{stats.type}</span>
-          <span className="percentage">{stats.percentage}</span>
-        </li>
+        {stats.map(stat => (
+          <li key={stat.type} className="item">
+            <span className="label">{stat.type}</span>
+            <span className="percentage">{stat.percentage}</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
 };
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      type: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
 };
 
 export default Statistics;

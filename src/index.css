@@ -40,6 +40,11 @@ code {
   padding: 10px;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .stat-list {
   list-style: none;
 }
@@ -68,4 +73,19 @@ code {
 
 .item {
   padding-right: 10px;
+}
+
+tr {
+  display: flex;
+  gap: 50px;
+  margin: 10px;
+}
+
+th {
+  display: flex;
+  margin: 50px;
+}
+td {
+  display: flex;
+  margin: auto;
 }

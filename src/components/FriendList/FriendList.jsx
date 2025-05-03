@@ -1,11 +1,35 @@
 import PropTypes from 'prop-types';
 
+const circleStyle = {
+  display: 'inline-block',
+  width: '10px',
+  height: '10px',
+  borderRadius: '50%',
+  marginRight: '5px',
+};
+
+const onlineStyle = {
+  backgroundColor: 'green',
+};
+
+const offlineStyle = {
+  backgroundColor: 'red',
+};
+
 const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
       {friends.map(friend => (
         <li key={friend.name} className="item">
-          <span className="status">{friend.isOnline}</span>
+          <span
+            className="status"
+            style={{
+              ...circleStyle,
+              ...(friend.isOnline ? onlineStyle : offlineStyle),
+            }}
+          >
+            {friend.isOnline}
+          </span>
           <img
             className="avatar"
             src={friend.avatar}

@@ -16,28 +16,40 @@ const offlineStyle = {
   backgroundColor: 'red',
 };
 
+const FriendListItem = ({ avatar, name, isOnline }) => {
+  return (
+    <li key={name} className="item">
+      <span
+        className="status"
+        style={{
+          ...circleStyle,
+          ...(isOnline ? onlineStyle : offlineStyle),
+        }}
+      >
+        {isOnline}
+      </span>
+      <img className="avatar" src={avatar} alt="User avatar" width="48" />
+      <p className="name">{name}</p>
+    </li>
+  );
+};
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
+
 const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
       {friends.map(friend => (
-        <li key={friend.name} className="item">
-          <span
-            className="status"
-            style={{
-              ...circleStyle,
-              ...(friend.isOnline ? onlineStyle : offlineStyle),
-            }}
-          >
-            {friend.isOnline}
-          </span>
-          <img
-            className="avatar"
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <p className="name">{friend.name}</p>
-        </li>
+        <FriendListItem
+          key={friend.name}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+        />
       ))}
     </ul>
   );

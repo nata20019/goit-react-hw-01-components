@@ -89,3 +89,7 @@ td {
   display: flex;
   margin: auto;
 }
+
+.transaction-history {
+  margin: 0 auto;
+}

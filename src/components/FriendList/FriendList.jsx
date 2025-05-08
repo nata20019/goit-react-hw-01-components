@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { AiFillBug } from 'react-icons/ai';
 
 const circleStyle = {
   display: 'inline-block',
@@ -19,6 +20,7 @@ const offlineStyle = {
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li key={name} className="item">
+      <AiFillBug />
       <span
         className="status"
         style={{
